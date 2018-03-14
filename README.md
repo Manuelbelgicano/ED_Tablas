@@ -3,4 +3,4 @@
 ###### Este es el repositorio del grupo A5 de EDIP de 1º del DGIIM
 
 ### ¿Cómo puedo contribuir?
-Se irán añadiendo las necesidades del programa conforme avancemos en la pestaña de `Issues`, además debuguear o mejorar el código o su documentación siempre es bienvenido :smile:
+Se irán añadiendo las necesidades del programa conforme avancemos en la pestaña de `Projects`, además debuguear o mejorar el código o su documentación siempre es bienvenido :smile:
