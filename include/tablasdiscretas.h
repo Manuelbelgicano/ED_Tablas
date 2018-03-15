@@ -1,8 +1,3 @@
-/**
-* @file tabladiscreta.h
-* @author Manuel Gachs Ballegeer
-*/
-
 #ifndef _TABLADISCRETA_H
 #define _TABLADISCRETA_H
 /**

@@ -1,8 +1,3 @@
-/**
- * @file auxiliares.h
- * @author Manuel Gachs Ballegeer
- */
-
 #ifndef AUXILIARES_H
 #define AUXILIARES_H
 
