@@ -17,6 +17,7 @@ Tabla crearPorValores(unsigned int n);
 * de frecuencias absolutas
 * @param k Modalidades de la variable
 * @return Tabla estadística de la variable a estudiar
+* @warning Las modalidades deben estar ordenadas
 */
 Tabla crearPorDistribucion(unsigned int k);
 
@@ -30,4 +31,10 @@ Tabla crearPorDistribucion(unsigned int k);
  */
 void markdown(const Tabla & tabla);
 
+/**
+ * @brief Ordena un array por el método de selección
+ * @param a Array a ordenar
+ * @param util Posiciones útiles del array
+ */
+void ordena(double & a[], int util);
 #endif
