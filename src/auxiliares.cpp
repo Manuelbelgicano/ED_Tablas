@@ -1,19 +1,22 @@
 #include<iostream>
-#include"tablasdiscretas.h"
+#include"tabla.h"
 #include"auxiliares.h"
+
+//VER ANOTACION PUESTA EN AUXILIARES.H
 
 using namespace std;
 
-TablaDiscreta crearPorValores(unsigned int n) {
-    double Aaux[n];
-    double x_i[100];
+Tabla crearPorValores(unsigned int n) {
+    string Aaux[n];
+    string x_i[100];
     unsigned int k = 0;
 
     for (int i=0; i<n; i++) {
         double aux;
         cin >> aux;
-
-        Aaux[i] = aux;
+                                                  ///<TRAE PROBLEMAS GRAVES CON LA MEDIA. HAY QUE HACER CONVERSION
+        string aux_string = to_string(aux);        ///<Conversion de double a string
+        Aaux[i] = aux_string;                      ///< Se quita cuando se haga con array de punteros
         bool n_modalidad = true;
 
         for (int j=0; j<k; j++)
@@ -38,37 +41,39 @@ TablaDiscreta crearPorValores(unsigned int n) {
         n_i[l] = aux;
     }
 
-    TablaDiscreta t (x_i,n_i,k);
+    Tabla t (x_i,n_i,k);
 
     return t;
 }
 
-TablaDiscreta crearPorDistribucion(unsigned int k) {
-    double x_i[k];
+Tabla crearPorDistribucion(unsigned int k) {
+    string x_i[k];
     unsigned int n_i[k];
 
     for (int i=0; i<k; i++) {
-        double auxx = 0;
-        unsigned int auxn = 0;
-        cin >> auxx >> auxn;
+        double aux_mod = 0;
+        unsigned int aux_n = 0;
+        cin >> aux_mod >> aux_n;
 
-        x_i[i] = auxx;
-        n_i[i] = auxn;
+        string aux_string = to_string(aux_mod);        ///<Conversion de double a string
+
+        x_i[i] = aux_string;
+        n_i[i] = aux_n;
     }
 
-    TablaDiscreta t (x_i,n_i,k);
+    Tabla t (x_i,n_i,k);
 
     return t;
 }
 
-void markdown(const TablaDiscreta & tabla) {
+void markdown(const Tabla & tabla) {
     cout << "\n##";
     char aux = 'm';
 
-    while (aux!='.') {
-        cin >> aux;
-        cout << aux;
-    }
+    //while (aux!='.') {
+    //    cin >> aux;
+    //    cout << aux;
+    //}
 
     cout << endl;
 

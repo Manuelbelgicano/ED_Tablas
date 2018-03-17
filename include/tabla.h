@@ -1,15 +1,18 @@
-#ifndef _TABLADISCRETA_H
-#define _TABLADISCRETA_H
+
+#include <string>
+
+#ifndef _TABLA_H
+#define _TABLA_H
 /**
  * @brief Clase que representa la representación en una tabla de la distribución de
- * frecuencias de una variable estadística
+ * frecuencias de una variable estadística.
  * @warning La variable puede tener como máximo solamente 100 modalidades
  */
-class TablaDiscreta {
+class Tabla{
 	private:
 		unsigned int n;///< Tamaño de la población
 		unsigned int k;///< Número de modalidades de la variable
-		double xi[100];///< Modalidades de la variable estadística
+		std::string xi[100];///< Modalidades de la variable estadística
 		unsigned int ni[100];///< Frecuencias absolutas de las modalidades
 		double fi[100];///< Frecuencias relativas de las modalidades
 		unsigned int Ni[100];///< Frecuencias absolutas acumuladas
@@ -22,7 +25,7 @@ class TablaDiscreta {
 		* @param n_i Valores de las frecuencias absolutas
 		* @pre n_i[i]!=0
 		*/
-		TablaDiscreta(double x_i[], unsigned int n_i[], unsigned int K);
+		Tabla( std::string x_i[], unsigned int n_i[], unsigned int K);
 		/**
 		* @brief Constructor primitivo a partir de la distribución de frecuencias
 		* relativas de la variable
@@ -31,7 +34,7 @@ class TablaDiscreta {
 		* @param N Tamaño de la población
 		* @pre f_i[i]!=0
 		*/
-		TablaDiscreta(double x_i[], double f_i[], unsigned int N, unsigned int K);
+		Tabla( std::string x_i[], double f_i[], unsigned int N, unsigned int K);
 		/**
 		* @brief Devuelve el tamaño de la población
 		* @return El tamaño de la población
