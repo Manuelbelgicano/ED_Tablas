@@ -44,9 +44,10 @@ Tabla crearPorValores(unsigned int n) {
 
     string xi[k];
 
-    for (int ii=0; ii<k; ii++)
-      xi<[ii] = to_string(x_i[ii]);
-    
+    for (int ii=0; ii<k; ii++) {
+      string aux_string = to_string(x_i[ii]);
+      xi[ii] = aux_string;
+    }
     
     Tabla t (xi,n_i,k);
 
@@ -91,7 +92,7 @@ void markdown(const Tabla & tabla) {
     cout << "\n- " << auxk << "\n- " << auxn << endl;
 }
 
-void ordena (double & a[], int util) {
+void ordena (double a[], int util) {
   int min;
   double aux;
 
