@@ -36,5 +36,5 @@ void markdown(const Tabla & tabla);
  * @param a Array a ordenar
  * @param util Posiciones útiles del array
  */
-void ordena(double & a[], int util);
+void ordena(double a[], int util);
 #endif
