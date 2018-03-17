@@ -7,18 +7,17 @@
 using namespace std;
 
 Tabla crearPorValores(unsigned int n) {
-    string Aaux[n];
-    string x_i[100];
+    double Aaux[n];
+    double x_i[100];
     unsigned int k = 0;
 
     for (int i=0; i<n; i++) {
         double aux;
         cin >> aux;
-                                                  ///<TRAE PROBLEMAS GRAVES CON LA MEDIA. HAY QUE HACER CONVERSION
-        string aux_string = to_string(aux);        ///<Conversion de double a string
-        Aaux[i] = aux_string;                      ///< Se quita cuando se haga con array de punteros
+                                                       
+        Aaux[i] = aux;
         bool n_modalidad = true;
-
+	
         for (int j=0; j<k; j++)
             if (Aaux[i]==x_i[j])
                 n_modalidad = false;
@@ -28,7 +27,9 @@ Tabla crearPorValores(unsigned int n) {
             k++;
         }
     }
-
+   
+    ordena(x_i,k);    
+      
     unsigned int n_i[k];
 
     for (int l=0; l<k; l++) {
@@ -41,7 +42,13 @@ Tabla crearPorValores(unsigned int n) {
         n_i[l] = aux;
     }
 
-    Tabla t (x_i,n_i,k);
+    string xi[k];
+
+    for (int ii=0; ii<k; ii++)
+      xi<[ii] = to_string(x_i[ii]);
+    
+    
+    Tabla t (xi,n_i,k);
 
     return t;
 }
@@ -82,4 +89,21 @@ void markdown(const Tabla & tabla) {
     unsigned int auxn = tabla.get_n();
 
     cout << "\n- " << auxk << "\n- " << auxn << endl;
+}
+
+void ordena (double & a[], int util) {
+  int min;
+  double aux;
+
+  for (int i=0; i<util; i++) {
+    min = i;
+
+    for (int j=i; j<util; i++)
+      if (a[j]<a[min])
+	min = j;
+
+    aux = a[i];
+    a[i] = a[min];
+    a[min] = aux;
+  }
 }
