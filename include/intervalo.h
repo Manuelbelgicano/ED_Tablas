@@ -82,17 +82,20 @@ public:
      * @return @retval true si el valor @p n pertenece al intervalo, @retval false en otro caso
      */
     bool estaDentro(double n)const ;
-
-
     /**
-* @brief realiza la interseccion de dos intervalos, puede
-* resultar un intervalo vacı́o en caso de que no tengan cotas
-* comunes, en caso contrario se revisan las cotas.
-* @param i1 primer intervalo de entrada
-* @param i2 segundo intervalo de entrada
-* @return devuelve el intervalo resultante de realizar la
-* interseccion entre los dos intervalos de entrada
-*/
+     * @brief Convierte un intervalo en un string
+     * @return La representación del intervalo en forma de tipo de dato string
+    */
+    std::string aString() const;
+    /**
+     * @brief realiza la interseccion de dos intervalos, puede
+     * resultar un intervalo vacı́o en caso de que no tengan cotas
+     * comunes, en caso contrario se revisan las cotas.
+     * @param i1 primer intervalo de entrada
+     * @param i2 segundo intervalo de entrada
+     * @return devuelve el intervalo resultante de realizar la
+     * interseccion entre los dos intervalos de entrada
+    */
     friend Intervalo interseccion(const Intervalo & intervalo1, const Intervalo & intervalo2);
 };
 
