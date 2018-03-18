@@ -87,6 +87,11 @@ public:
      * @return La representación del intervalo en forma de tipo de dato string
     */
     std::string aString() const;
+
+    /**@brief Obtiene la amplitud del intervalo
+     *@return amplitud de lintervalo
+     */
+     double getAmplitud()const;
     /**
      * @brief realiza la interseccion de dos intervalos, puede
      * resultar un intervalo vacı́o en caso de que no tengan cotas

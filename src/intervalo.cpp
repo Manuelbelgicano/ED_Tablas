@@ -137,6 +137,9 @@ string Intervalo::aString() const{
 
   return inter_string;
 }
+double Intervalo::getAmplitud() const{
+  return cotaSup - cotaInf;
+}
 
 //CODIGO PRESCINDIBLE ABAJO
 void escribir(const Intervalo & i ){
