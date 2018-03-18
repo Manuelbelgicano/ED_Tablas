@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "intervalo.h"
+#include <string>
 using namespace std;
 
 bool Intervalo::validar (double cotaInferior, double cotaSuperior, bool cerradoInferior, bool cerradoSuperior){
@@ -112,7 +113,32 @@ bool Intervalo::estaDentro ( double n ) const{
   return dentro;
 }
 
+string Intervalo::aString() const{
+  string inter_string;
 
+  string izq;
+  string der;
+
+  if ( i.esCerradoInf() ){
+    izq = "[";
+  }
+  else{
+    izq = "(";
+  }
+
+  if ( i.esCerradoSup() ){
+    der = "]";
+  }
+  else{
+    der = ")";
+  }
+
+  inter_string = izq + to_string( i.getCotaInf() ) + "," + to_string( i.getCotaSup() ) + der;
+
+  return inter_string;
+}
+
+//CODIGO PRESCINDIBLE ABAJO
 void escribir(const Intervalo & i ){
   char izq;
   char der;
@@ -132,8 +158,11 @@ void escribir(const Intervalo & i ){
   }
 
   cout << izq << i.getCotaInf() << "," << i.getCotaSup() << der;
-}
 
+
+}
+//Fin de codigo PRESCINDIBLE.
+//---
 
 
 
@@ -219,4 +248,22 @@ Intervalo interseccion(const Intervalo & intervalo1, const Intervalo & intervalo
   }
 
   return intervalof;
+}
+
+
+void ordena_intervalos ( Intervalo a[], int util){
+  int min;
+  Intervalo aux;
+
+  for (int i=0; i<util; i++) {
+    min = i;
+
+    for (int j=i; j<util; i++)
+      if (a[j].getValorIntermedio() < a[min].getValorIntermedio())
+	     min = j;
+
+    aux = a[i];
+    a[i] = a[min];
+    a[min] = aux;
+  }
 }

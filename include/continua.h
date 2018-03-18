@@ -1,3 +1,5 @@
+
+
 #ifndef _CONTINUO_H
 #define _CONTINUO_H
 /**
@@ -14,10 +16,11 @@ class Continua{
   public:
     /**
     * @brief Modifica la tabla estadística a partir de los valores que
-    * ha tomado la variable estadística que queremos estudiar
+    * ha tomado la variable estadística que queremos estudiar.
     * @param n Tamaño de la muestra/población
+    * @param amplitud: Amplitud de los intervalos.Si no se dan se calculan automáticamente
     */
-    void crearPorValores (unsigned int n);
+    void crearPorValores (unsigned int n, unsigned int amplitud = 0);
 
     /**
     * @brief Modifica la tabla estadística a partir de los valores que
@@ -27,3 +30,4 @@ class Continua{
     void crearPorDistribucion (unsigned int k);
 
 };
+#endif

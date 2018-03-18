@@ -5,7 +5,8 @@
 //VER ANOTACION PUESTA EN AUXILIARES.H
 
 using namespace std;
-
+//ESTAS FUNCIONES YA SOBRAN PUESTO QUE ESTÁN IMPLEMENTADAS EN
+// LAS CLASES DISCRETA y CONTINUA. LAS DEJO POR AHORA
 Tabla crearPorValores(unsigned int n) {
     double Aaux[n];
     double x_i[100];
@@ -14,10 +15,10 @@ Tabla crearPorValores(unsigned int n) {
     for (int i=0; i<n; i++) {
         double aux;
         cin >> aux;
-                                                       
+
         Aaux[i] = aux;
         bool n_modalidad = true;
-	
+
         for (int j=0; j<k; j++)
             if (Aaux[i]==x_i[j])
                 n_modalidad = false;
@@ -27,9 +28,9 @@ Tabla crearPorValores(unsigned int n) {
             k++;
         }
     }
-   
-    ordena(x_i,k);    
-      
+
+    ordena(x_i,k);
+
     unsigned int n_i[k];
 
     for (int l=0; l<k; l++) {
@@ -48,7 +49,7 @@ Tabla crearPorValores(unsigned int n) {
       string aux_string = to_string(x_i[ii]);
       xi[ii] = aux_string;
     }
-    
+
     Tabla t (xi,n_i,k);
 
     return t;

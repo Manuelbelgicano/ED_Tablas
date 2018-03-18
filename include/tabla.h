@@ -12,7 +12,7 @@ class Tabla{
 	private:
 		unsigned int n;///< Tamaño de la población
 		unsigned int k;///< Número de modalidades de la variable
-		std::string xi[100];///< Modalidades de la variable estadística
+		std::string xi[100];///< Modalidades de la variable estadística. Array de representación;
 		unsigned int ni[100];///< Frecuencias absolutas de las modalidades
 		double fi[100];///< Frecuencias relativas de las modalidades
 		unsigned int Ni[100];///< Frecuencias absolutas acumuladas

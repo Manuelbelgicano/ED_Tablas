@@ -113,6 +113,13 @@ void escribir(const Intervalo &i);
 */
 void leer(Intervalo &i);
 
+/**
+ * @brief Ordena un array de intervalos por el método de selección.
+ * @param a Array a ordenar
+ * @param util Posiciones útiles del array
+ * @pre Ningún intervalo se intersecciona con otro.
+ */
+void ordena_intervalos ( Intervalo a[], int util);
 
 
 
