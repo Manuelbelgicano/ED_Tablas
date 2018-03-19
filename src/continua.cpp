@@ -15,7 +15,7 @@ void Continua::crearPorDistribucion(unsigned int k){
   unsigned int n_i[k];
 
 
-  for (int = 0; i < k ; i++){
+  for (int i = 0; i < k ; i++){
     Intervalo aux_mod;
     unsigned int aux_n;
     leer(aux_mod);
@@ -25,6 +25,11 @@ void Continua::crearPorDistribucion(unsigned int k){
     n_i = aux_n;
     x_i[i] = aux_mod.aString(); ///Array representación
   }
+  
+  for ( int i = 0; i < k; i++ ){
+    marcas_clase[i] = xi[i].getValorIntermedio(); ///<Array de marcas de clase para el cálculo.
+  }
+  
     Tabla t (x_i,n_i,k)
     tabla = t;
 }
