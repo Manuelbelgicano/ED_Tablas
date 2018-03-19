@@ -11,6 +11,7 @@ class Continua{
   private:
     Tabla tabla;
     Intervalo xi[100];
+    double marcas_clase[100];
 
 
   public:
