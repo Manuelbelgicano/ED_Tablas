@@ -9,7 +9,7 @@
  class Discreta{
    private:
      Tabla tabla;
-     double xi[100]; ///< Array de calculo;
+     double xi[tabla.TAMANO]; ///< Array de calculo;
 
 
    public:
