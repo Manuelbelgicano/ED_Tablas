@@ -10,8 +10,8 @@
 class Continua{
   private:
     Tabla tabla;
-    Intervalo xi[100];
-    double marcas_clase[100];
+    Intervalo xi[tabla.TAMANO];
+    double marcas_clase[tabla.TAMANO];
 
 
   public:
