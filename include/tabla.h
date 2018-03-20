@@ -10,13 +10,14 @@
  */
 class Tabla{
 	private:
+		static const unsigned int TAMANO = 100;
 		unsigned int n;///< Tamaño de la población
 		unsigned int k;///< Número de modalidades de la variable
-		std::string xi[100];///< Modalidades de la variable estadística. Array de representación;
-		unsigned int ni[100];///< Frecuencias absolutas de las modalidades
-		double fi[100];///< Frecuencias relativas de las modalidades
-		unsigned int Ni[100];///< Frecuencias absolutas acumuladas
-		double Fi[100];///< Frecuencias relativas acumuladas
+		std::string xi[TAMANO];///< Modalidades de la variable estadística. Array de representación;
+		unsigned int ni[TAMANO];///< Frecuencias absolutas de las modalidades
+		double fi[TAMANO];///< Frecuencias relativas de las modalidades
+		unsigned int Ni[TAMANO];///< Frecuencias absolutas acumuladas
+		double Fi[TAMANO];///< Frecuencias relativas acumuladas
 	public:
 		/**
 		* @brief Constructor primitivo a partir de la distribución de frecuencias
